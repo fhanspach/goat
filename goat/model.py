@@ -61,6 +61,8 @@ class Match(model.Match):
                     value = context
                 elif annotation is Text:
                     value = context.text
+                elif annotation is inspect._empty:
+                    raise RuntimeError("Parameter '{}' does not have a type! Please specify it in the correct steps file.".format(arg.name))
                 else:
                     value = context.__getattr__(CONTEXT_NAMESPACE.format(annotation_name))
 
