@@ -21,10 +21,3 @@ Feature: Context
 
   Scenario: The context itself as context parameter
     * This function returns 5 and needs the Context
-
-  Scenario: The context parameter is missing
-    * This function needs a int as context parameter
-
-  Scenario: The context parameter is missing
-    * This argless function returns an object
-    * This function needs a int as context parameter

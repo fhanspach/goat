@@ -46,12 +46,3 @@ def assert_that_the_result_was(expected_result: int, result: int) -> int:
     assert expected_result == result
 
 
-@step("This function needs a int as context parameter")
-def this_function_takes_a_table(number: object, context: Context):
-    print(number)
-
-
-
-@step("This argless function returns an object")
-def this_argless_function_returns_oject() -> object:
-    return object()
